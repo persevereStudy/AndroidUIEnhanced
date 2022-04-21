@@ -1,0 +1,3 @@
+rootProject.name = "AndroidUIEnhanced"
+include ':app'
+include ':commonui'

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaterialShape">
+        <!-- Shape appearance style reference to be used to construct a ShapeAppearanceModel. -->
+        <attr name="shapeAppearance" format="reference" />
+        <!-- Shape appearance overlay style reference to be used to modify the shapeAppearance. -->
+        <attr name="shapeAppearanceOverlay" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeAppearance">
+        <!-- Corner size to be used in the ShapeAppearance. All corners default to this value -->
+        <attr name="cornerSize" format="dimension" />
+        <!-- Top left corner size to be used in the ShapeAppearance. -->
+        <attr name="cornerSizeTopLeft" format="dimension" />
+        <!-- Top right corner size to be used in the ShapeAppearance. -->
+        <attr name="cornerSizeTopRight" format="dimension" />
+        <!-- Bottom right corner size to be used in the ShapeAppearance. -->
+        <attr name="cornerSizeBottomRight" format="dimension" />
+        <!-- Bottom left corner size to be used in the ShapeAppearance. -->
+        <attr name="cornerSizeBottomLeft" format="dimension" />
+
+        <!-- Corner family to be used in the ShapeAppearance. All corners default to this value -->
+        <attr name="cornerFamily" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="cut" value="1" />
+        </attr>
+        <!-- Top left corner family to be used in the ShapeAppearance. -->
+        <attr name="cornerFamilyTopLeft" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="cut" value="1" />
+        </attr>
+        <!-- Top right corner family to be used in the ShapeAppearance. -->
+        <attr name="cornerFamilyTopRight" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="cut" value="1" />
+        </attr>
+        <!-- Bottom right corner family to be used in the ShapeAppearance. -->
+        <attr name="cornerFamilyBottomRight" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="cut" value="1" />
+        </attr>
+        <!-- Bottom left corner family to be used in the ShapeAppearance. -->
+        <attr name="cornerFamilyBottomLeft" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="cut" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 统一定义 -->
+    <attr name="jf_elevation" format="dimension" />
+    <attr name="jf_elevationShadowColor" format="color" />
+    <attr name="jf_elevationAmbientShadowColor" format="color" />
+    <attr name="jf_elevationSpotShadowColor" format="color" />
+    <attr name="jf_elevationShadowCanvasEnable" format="boolean" />
+
+    <attr name="jf_cornerRadiusTopStart" format="dimension" />
+    <attr name="jf_cornerRadiusTopEnd" format="dimension" />
+    <attr name="jf_cornerRadiusBottomStart" format="dimension" />
+    <attr name="jf_cornerRadiusBottomEnd" format="dimension" />
+    <attr name="jf_cornerRadius" format="dimension" />
+
+    <attr name="jf_cornerCutTopStart" format="dimension" />
+    <attr name="jf_cornerCutTopEnd" format="dimension" />
+    <attr name="jf_cornerCutBottomStart" format="dimension" />
+    <attr name="jf_cornerCutBottomEnd" format="dimension" />
+    <attr name="jf_cornerCut" format="dimension" />
+
+    <!-- 是否对View进行裁剪，默认false -->
+    <attr name="jf_cropEnable" format="boolean" />
+
+    <attr name="jf_stroke" format="color" />
+    <attr name="jf_strokeWidth" format="dimension" />
+
+    <!-- 颜色|渐变 -->
+    <attr name="jf_solidColor" format="color" />
+    <attr name="jf_startColor" format="color" />
+    <attr name="jf_endColor" format="color" />
+    <attr name="jf_colorOrientation" format="enum">
+        <enum name="left_to_right" value="0" /><!-- 左到右 -->
+        <enum name="right_to_left" value="1" /><!-- 右到左 -->
+        <enum name="top_to_bottom" value="2" /><!-- 上到下 -->
+        <enum name="bottom_to_top" value="3" /><!-- 下到上 -->
+        <enum name="tl_to_br" value="4" /> <!-- 左上到右下 -->
+        <enum name="tr_to_bl" value="5" /> <!-- 右上到左下 -->
+        <enum name="br_to_tl" value="6" /> <!-- 右下到左上 -->
+        <enum name="bl_to_tr" value="7" /> <!-- 左下到右上 -->
+    </attr>
+
+    <declare-styleable name="JFLinearLayout">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+    <declare-styleable name="JFFrameLayout">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+    <declare-styleable name="JFTextView">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+    <declare-styleable name="JFView">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+    <declare-styleable name="JFConstraintLayout">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+    <declare-styleable name="JFRelativeLayout">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+    <declare-styleable name="JFImageView">
+
+        <attr name="jf_elevation" />
+        <attr name="jf_elevationShadowColor" />
+        <attr name="jf_elevationAmbientShadowColor" />
+        <attr name="jf_elevationSpotShadowColor" />
+        <attr name="jf_elevationShadowCanvasEnable" />
+
+        <attr name="jf_cornerRadiusTopStart" />
+        <attr name="jf_cornerRadiusTopEnd" />
+        <attr name="jf_cornerRadiusBottomStart" />
+        <attr name="jf_cornerRadiusBottomEnd" />
+        <attr name="jf_cornerRadius" />
+
+        <attr name="jf_cornerCutTopStart" />
+        <attr name="jf_cornerCutTopEnd" />
+        <attr name="jf_cornerCutBottomStart" />
+        <attr name="jf_cornerCutBottomEnd" />
+        <attr name="jf_cornerCut" />
+
+        <attr name="jf_stroke" />
+        <attr name="jf_strokeWidth" />
+
+        <!-- 是否对View进行裁剪，默认false -->
+        <attr name="jf_cropEnable" />
+
+        <!-- 渐变颜色 -->
+        <attr name="jf_solidColor" />
+        <attr name="jf_startColor" />
+        <attr name="jf_endColor" />
+        <attr name="jf_colorOrientation" />
+    </declare-styleable>
+
+
+</resources>

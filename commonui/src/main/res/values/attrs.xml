@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="JFFlowLayout">
+
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="singleLine" format="boolean" />
+        <attr name="maxLine" format="integer" />
+    </declare-styleable>
+
+</resources>
